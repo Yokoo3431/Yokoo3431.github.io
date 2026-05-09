@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目名称 | Yoko 建筑设计作品集</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航 -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-brand">
+            <a href="../index.html">YOKO</a>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html#projects" class="nav-link">作品</a>
+            <a href="../index.html#about" class="nav-link">关于</a>
+            <a href="../index.html#contact" class="nav-link">联系</a>
+        </div>
+        <div class="nav-controls">
+            <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 项目详情 -->
+    <article class="project-detail">
+        <div class="modal-hero" style="margin-top: 0; aspect-ratio: 21/9;">
+            <img src="../assets/images/project-01-cover.jpg" alt="项目名称">
+            <div class="modal-hero-overlay"></div>
+        </div>
+        <div class="modal-body" style="margin-top: -4rem;">
+            <span class="modal-category">建成项目</span>
+            <h2 class="modal-title">项目名称</h2>
+            <div class="modal-meta">
+                <span>2024</span>
+                <span>·</span>
+                <span>项目地点</span>
+                <span>·</span>
+                <span>建筑类型</span>
+                <span>·</span>
+                <span>建筑面积</span>
+            </div>
+            <div class="modal-description">
+                <p>项目描述段落1...</p>
+                <p>项目描述段落2...</p>
+            </div>
+            <div class="modal-gallery">
+                <img src="../assets/images/project-01-01.jpg" alt="项目图1" loading="lazy">
+                <img src="../assets/images/project-01-02.jpg" alt="项目图2" loading="lazy">
+                <img src="../assets/images/project-01-03.jpg" alt="项目图3" loading="lazy">
+                <img src="../assets/images/project-01-04.jpg" alt="项目图4" loading="lazy">
+            </div>
+        </div>
+    </article>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <span class="footer-brand">YOKO</span>
+                <a href="../index.html" style="font-size: 0.875rem; color: var(--text-secondary);">← 返回首页</a>
+                <span class="footer-year">© 2026</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 主题切换
+        const themeToggle = document.getElementById('themeToggle');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoko | 建筑设计作品集</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <a href="#hero">YOKO</a>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#projects" class="nav-link">作品</a>
+            <a href="#about" class="nav-link">关于</a>
+            <a href="#contact" class="nav-link">联系</a>
+        </div>
+        <div class="nav-controls">
+            <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 首屏 -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-image" style="background-image: url('assets/images/hero.jpg')"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-line">设计</span>
+                <span class="hero-line">是空间</span>
+                <span class="hero-line">与时间的对话</span>
+            </h1>
+            <p class="hero-subtitle">建筑设计作品集</p>
+            <div class="hero-meta">
+                <span>2019 — 至今</span>
+                <span class="meta-separator">·</span>
+                <span>建成与未建成</span>
+            </div>
+            <a href="#projects" class="hero-cta">
+                <span>浏览作品</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- 项目统计 -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="12">0</span>
+                    <span class="stat-label">项目总数</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-label">建成项目</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="4">0</span>
+                    <span class="stat-label">概念设计</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-label">竞赛作品</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品筛选 -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title">作品</h2>
+                <p class="section-desc">从概念到建成，记录每一个设计思考</p>
+            </header>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="built">建成项目</button>
+                <button class="filter-btn" data-filter="unbuilt">概念设计</button>
+                <button class="filter-btn" data-filter="competition">竞赛</button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <!-- 项目卡片将通过 JS 动态渲染 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于 -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="assets/images/about.jpg" alt="Yoko" loading="lazy">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">关于</h2>
+                    <div class="about-text">
+                        <p>建筑师，专注于空间体验与场所精神的营造。</p>
+                        <p>从概念草图到建成落地，相信每一个项目都是一次对场地、功能与形式的深度探索。未建成的方案同样承载着思考的价值，它们记录了设计过程中的试错与成长。</p>
+                        <p>这个网站是一个持续更新的档案，记录着从业以来的设计轨迹。</p>
+                    </div>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-label">教育</span>
+                            <span class="info-value">建筑学硕士</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">所在地</span>
+                            <span class="info-value">中国 · 南京</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">专注领域</span>
+                            <span class="info-value">文化建筑 / 商业空间 / 城市更新</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系 -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">联系</h2>
+                <p class="contact-desc">合作洽谈、项目咨询，或只是聊聊建筑</p>
+                <div class="contact-links">
+                    <a href="mailto:your.email@example.com" class="contact-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <span>your.email@example.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <span class="footer-brand">YOKO</span>
+                <span class="footer-year">© 2026</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 项目详情弹窗 -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose" aria-label="关闭">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <div class="modal-content" id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
